@@ -1,0 +1,14 @@
+<%= form_with model: @kitten, local: true do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+    <%= form.label :cuteness %>
+    <%= form.number_field :cuteness %>
+    <%= form.label :softness %>
+    <%= form.number_field :softness %>
+    <%= form.submit %>
+<% end %>
+
+<%= link_to "Back", root_path %>
+<%= render_flash_messages %>

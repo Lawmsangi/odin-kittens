@@ -1,0 +1,13 @@
+<h1>Kitten Details</h1>
+<div>
+    <h2>Name:<%= @kitten.name %></h2>
+    <p>Age:<%= @kitten.age %></p>
+    <p>Cuteness:<%= @kitten.cuteness %></p>
+    <p>Softness:<%= @kitten.softness %></p>
+</div>
+
+<p><%= link_to "Edit", edit_kitten_path(@kitten) %></p>
+<%= form_with(model: @kitten, url: kitten_path(@kitten), method: :delete, data: { confirm: "Are you sure?" }) do |form| %>
+  <%= form.submit "Delete Event", class: "delete-btn" %>
+<% end %>
+<p><%= link_to "Back", root_path %></p>
